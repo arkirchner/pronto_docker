@@ -1,0 +1,11 @@
+source "https://rubygems.org"
+
+gem "pronto"
+gem "pronto-brakeman"
+gem "pronto-fasterer"
+gem "pronto-rails_best_practices"
+gem "pronto-rails_schema"
+gem "pronto-reek"
+gem "pronto-rubocop"
+gem "pronto-scss"
+gem "pronto-eslint_npm"
