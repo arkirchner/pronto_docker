@@ -1,4 +1,0 @@
----
-
-files_to_lint: '\.(c|sc)ss$'
-cli_options: '--config ./.stylelintrc'

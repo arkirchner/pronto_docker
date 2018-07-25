@@ -1,6 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    actionview (5.2.0)
+      activesupport (= 5.2.0)
+      builder (~> 3.1)
+      erubi (~> 1.4)
+      rails-dom-testing (~> 2.0)
+      rails-html-sanitizer (~> 1.0, >= 1.0.3)
     activesupport (5.2.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
@@ -13,7 +19,16 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
+    better_html (1.0.11)
+      actionview (>= 4.0)
+      activesupport (>= 4.0)
+      ast (~> 2.0)
+      erubi (~> 1.4)
+      html_tokenizer (~> 0.0.6)
+      parser (>= 2.4)
+      smart_properties
     brakeman (4.3.1)
+    builder (3.2.3)
     code_analyzer (0.4.8)
       sexp_processor
     codeclimate-engine-rb (0.4.1)
@@ -22,9 +37,18 @@ GEM
       descendants_tracker (~> 0.0.1)
     colorize (0.8.1)
     concurrent-ruby (1.0.5)
+    crass (1.0.4)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     equalizer (0.0.11)
+    erb_lint (0.0.26)
+      activesupport
+      better_html (~> 1.0.7)
+      colorize
+      html_tokenizer
+      rubocop (~> 0.51)
+      smart_properties
+    erubi (1.7.1)
     erubis (2.7.0)
     faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
@@ -35,6 +59,7 @@ GEM
     gitlab (4.4.0)
       httparty (>= 0.14.0)
       terminal-table (>= 1.5.1)
+    html_tokenizer (0.0.7)
     httparty (0.16.2)
       multi_xml (>= 0.5.2)
     i18n (1.0.1)
@@ -42,9 +67,15 @@ GEM
     ice_nine (0.11.2)
     jaro_winkler (1.5.1)
     json (2.1.0)
+    loofah (2.2.2)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.5.9)
+    mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
+    nokogiri (1.8.4)
+      mini_portile2 (~> 2.3.0)
     octokit (4.9.0)
       sawyer (~> 0.8.0, >= 0.5.3)
     parallel (1.12.1)
@@ -60,6 +91,9 @@ GEM
       thor (~> 0.19.0)
     pronto-brakeman (0.9.1)
       brakeman (>= 3.2.0)
+      pronto (~> 0.9.0)
+    pronto-erb_lint (0.1.4)
+      erb_lint (~> 0.0.24)
       pronto (~> 0.9.0)
     pronto-eslint_npm (0.9.1)
       pronto (~> 0.9.1)
@@ -84,6 +118,11 @@ GEM
       pronto (~> 0.9.0)
       rugged (~> 0.24, >= 0.23.0)
     public_suffix (3.0.2)
+    rails-dom-testing (2.0.3)
+      activesupport (>= 4.2.0)
+      nokogiri (>= 1.6)
+    rails-html-sanitizer (1.0.4)
+      loofah (~> 2.2, >= 2.2.2)
     rails_best_practices (1.19.3)
       activesupport
       code_analyzer (>= 0.4.8)
@@ -127,6 +166,7 @@ GEM
       rake (>= 0.9, < 13)
       sass (~> 3.5.5)
     sexp_processor (4.11.0)
+    smart_properties (1.13.1)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thor (0.19.4)
@@ -146,6 +186,7 @@ PLATFORMS
 DEPENDENCIES
   pronto
   pronto-brakeman
+  pronto-erb_lint
   pronto-eslint_npm
   pronto-fasterer
   pronto-rails_best_practices
