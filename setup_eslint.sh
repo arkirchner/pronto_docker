@@ -1,4 +1,4 @@
-npm install -g eslint eslint-plugin-react babel-eslint
+npm install -g eslint eslint-plugin-react babel-eslint stylelint
 
 # airbnb-base for ES5
 (

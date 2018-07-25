@@ -80,6 +80,9 @@ GEM
     pronto-scss (0.9.1)
       pronto (~> 0.9.0)
       scss_lint (~> 0.43, >= 0.43.0)
+    pronto-stylelint (0.9.1)
+      pronto (~> 0.9.0)
+      rugged (~> 0.24, >= 0.23.0)
     public_suffix (3.0.2)
     rails_best_practices (1.19.3)
       activesupport
@@ -150,6 +153,7 @@ DEPENDENCIES
   pronto-reek
   pronto-rubocop
   pronto-scss
+  pronto-stylelint
 
 BUNDLED WITH
    1.16.3
