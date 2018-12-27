@@ -1,4 +1,4 @@
-FROM ruby:2.5.1-slim
+FROM ruby:2.5.3-slim
 MAINTAINER Armin Kirchner <post.armin@gmail.com>
 
 # Dependencies
