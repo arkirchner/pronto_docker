@@ -13,3 +13,5 @@ services:
       - LANGUAGE=en_US.UTF-8
       - PRONTO_BITBUCKET_USERNAME
       - PRONTO_BITBUCKET_PASSWORD
+    volumes:
+      - ../myoko:/lint_app/daikairo

@@ -1,25 +1,37 @@
+GIT
+  remote: https://github.com/tleish/pronto-erb_lint.git
+  revision: 5ab409c5a3b5b98bbecaaf0d4063c62505f70d83
+  specs:
+    pronto-erb_lint (0.1.5)
+      erb_lint (~> 0.0.24)
+      pronto (> 0.9.0)
+
+PATH
+  remote: pronto
+  specs:
+    pronto (0.10.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    actionview (5.2.3)
-      activesupport (= 5.2.3)
+    actionview (6.0.0)
+      activesupport (= 6.0.0)
       builder (~> 3.1)
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
-      rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    activesupport (5.2.3)
+      rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    activesupport (6.0.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.6.0)
-      public_suffix (>= 2.0.2, < 4.0)
+      zeitwerk (~> 2.1, >= 2.1.8)
     ast (2.4.0)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
-    better_html (1.0.13)
+    better_html (1.0.14)
       actionview (>= 4.0)
       activesupport (>= 4.0)
       ast (~> 2.0)
@@ -27,7 +39,7 @@ GEM
       html_tokenizer (~> 0.0.6)
       parser (>= 2.4)
       smart_properties
-    brakeman (4.5.1)
+    brakeman (4.6.1)
     builder (3.2.3)
     code_analyzer (0.4.8)
       sexp_processor
@@ -41,7 +53,7 @@ GEM
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     equalizer (0.0.11)
-    erb_lint (0.0.28)
+    erb_lint (0.0.29)
       activesupport
       better_html (~> 1.0.7)
       html_tokenizer
@@ -50,18 +62,10 @@ GEM
       smart_properties
     erubi (1.8.0)
     erubis (2.7.0)
-    faraday (0.15.4)
-      multipart-post (>= 1.2, < 3)
-    fasterer (0.5.1)
+    fasterer (0.6.0)
       colorize (~> 0.7)
       ruby_parser (>= 3.13.0)
-    gitlab (4.11.0)
-      httparty (~> 0.14, >= 0.14.0)
-      terminal-table (~> 1.5, >= 1.5.1)
     html_tokenizer (0.0.7)
-    httparty (0.17.0)
-      mime-types (~> 3.0)
-      multi_xml (>= 0.5.2)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
@@ -71,58 +75,39 @@ GEM
     loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mime-types (3.2.2)
-      mime-types-data (~> 3.2015)
-    mime-types-data (3.2019.0331)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
-    multi_xml (0.6.0)
-    multipart-post (2.1.1)
-    nokogiri (1.10.3)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
-    octokit (4.14.0)
-      sawyer (~> 0.8.0, >= 0.5.3)
     parallel (1.17.0)
     parser (2.6.3.0)
       ast (~> 2.4.0)
-    pronto (0.9.5)
-      gitlab (~> 4.0, >= 4.0.0)
-      httparty (>= 0.13.7)
-      octokit (~> 4.7, >= 4.7.0)
-      rainbow (~> 2.1)
-      rugged (~> 0.24, >= 0.23.0)
-      thor (~> 0.19.0)
-    pronto-brakeman (0.9.1)
+    pronto-brakeman (0.10.0)
       brakeman (>= 3.2.0)
-      pronto (~> 0.9.0)
-    pronto-erb_lint (0.1.5)
-      erb_lint (~> 0.0.24)
-      pronto (> 0.9.0)
-    pronto-eslint_npm (0.9.1)
-      pronto (~> 0.9.1)
-    pronto-fasterer (0.9.0)
+      pronto (~> 0.10.0)
+    pronto-eslint_npm (0.10.1)
+      pronto (~> 0.10.0)
+    pronto-fasterer (0.10.0)
       fasterer (~> 0.3, >= 0.3.0)
-      pronto (~> 0.9.0)
-    pronto-rails_best_practices (0.9.0)
-      pronto (~> 0.9.0)
+      pronto (~> 0.10.0)
+    pronto-rails_best_practices (0.10.0)
+      pronto (~> 0.10.0)
       rails_best_practices (~> 1.16, >= 1.15.0)
-    pronto-rails_schema (0.9.1)
-      pronto (~> 0.9.0)
-    pronto-reek (0.9.1)
-      pronto (~> 0.9.0)
+    pronto-reek (0.10.0)
+      pronto (~> 0.10.0)
       reek (>= 4.2, < 6.0)
-    pronto-rubocop (0.9.1)
-      pronto (~> 0.9.0)
+    pronto-rubocop (0.10.0)
+      pronto (~> 0.10.0)
       rubocop (~> 0.50, >= 0.49.1)
-    pronto-stylelint (0.9.1)
-      pronto (~> 0.9.0)
+    pronto-stylelint (0.10.0)
+      pronto (~> 0.10.0)
       rugged (~> 0.24, >= 0.23.0)
     psych (3.1.0)
-    public_suffix (3.1.1)
+    rack (2.0.7)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.4)
+    rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
     rails_best_practices (1.19.4)
       activesupport
@@ -132,9 +117,7 @@ GEM
       json
       require_all (~> 2.0)
       ruby-progressbar
-    rainbow (2.2.2)
-      rake
-    rake (12.3.2)
+    rainbow (3.0.0)
     reek (5.4.0)
       codeclimate-engine-rb (~> 0.4.0)
       kwalify (~> 0.7.0)
@@ -142,27 +125,26 @@ GEM
       psych (~> 3.1.0)
       rainbow (>= 2.0, < 4.0)
     require_all (2.0.0)
-    rubocop (0.72.0)
+    rubocop (0.74.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.6)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
-    rubocop-rspec (1.33.0)
+    rubocop-performance (1.4.1)
+      rubocop (>= 0.71.0)
+    rubocop-rails (2.3.1)
+      rack (>= 1.1)
+      rubocop (>= 0.72.0)
+    rubocop-rspec (1.35.0)
       rubocop (>= 0.60.0)
     ruby-progressbar (1.10.1)
     ruby_parser (3.13.1)
       sexp_processor (~> 4.9)
-    rugged (0.28.2)
-    sawyer (0.8.2)
-      addressable (>= 2.3.5)
-      faraday (> 0.8, < 2.0)
+    rugged (0.28.3.1)
     sexp_processor (4.12.1)
-    smart_properties (1.14.0)
-    terminal-table (1.8.0)
-      unicode-display_width (~> 1.1, >= 1.1.1)
-    thor (0.19.4)
+    smart_properties (1.15.0)
     thread_safe (0.3.6)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
@@ -172,21 +154,23 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
+    zeitwerk (2.1.9)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  pronto
+  pronto (= 0.10.0)!
   pronto-brakeman
-  pronto-erb_lint
+  pronto-erb_lint!
   pronto-eslint_npm
   pronto-fasterer
   pronto-rails_best_practices
-  pronto-rails_schema
   pronto-reek
   pronto-rubocop
   pronto-stylelint
+  rubocop-performance
+  rubocop-rails
   rubocop-rspec
 
 BUNDLED WITH
