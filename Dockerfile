@@ -27,9 +27,10 @@ COPY setup_eslint.sh /lint_app/
 # install javasript linter
 RUN ./setup_eslint.sh
 
-COPY Gemfile Gemfile.lock /lint_app/
+COPY Gemfile Gemfile.lock bitbucket_client.rb /lint_app/
 
 RUN git clone https://github.com/prontolabs/pronto pronto_source \
+  && cp bitbucket_client.rb pronto_source/lib/pronto/clients/bitbucket_client.rb \
   && cd pronto_source \
   && git checkout 930d164e85024646b084d04d503fdab9a1a58414 \
   && gem build pronto.gemspec \
