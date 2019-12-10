@@ -7,12 +7,11 @@ end
 
 gem "pronto", "0.10.0", path: "pronto"
 gem "pronto-brakeman", require: false
-gem "pronto-erb_lint", github: "tleish/pronto-erb_lint", require: false
 gem "pronto-eslint_npm", require: false
 gem "pronto-fasterer", require: false
 gem "pronto-rails_best_practices", require: false
 gem "pronto-reek", require: false
-gem "pronto-rubocop", require: false
+gem "pronto-rubocop", github: "prontolabs/pronto-rubocop", require: false
 gem "pronto-stylelint", require: false
 gem "rubocop-performance"
 gem "rubocop-rails"

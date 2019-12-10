@@ -29,10 +29,8 @@ RUN ./setup_eslint.sh
 
 COPY Gemfile Gemfile.lock bitbucket_client.rb /lint_app/
 
-RUN git clone https://github.com/prontolabs/pronto pronto_source \
-  && cp bitbucket_client.rb pronto_source/lib/pronto/clients/bitbucket_client.rb \
+RUN git clone https://github.com/bradrees/pronto pronto_source \
   && cd pronto_source \
-  && git checkout 930d164e85024646b084d04d503fdab9a1a58414 \
   && gem build pronto.gemspec \
   && mkdir ../pronto \
   && cp pronto-0.10.0.gem ../pronto \
